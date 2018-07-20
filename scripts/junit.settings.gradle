@@ -1,0 +1,13 @@
+apply plugin: 'org.junit.platform.gradle.plugin'
+
+junitPlatform {
+//    jupiterVersion '5.0.0'
+    platformVersion '1.0.1'
+    filters {
+        engines {
+            include 'spek', 'junit'
+        }
+    }
+    reportsDir file('build/test-results/junit-platform') // this is the default
+//    logManager 'org.apache.logging.log4j.jul.LogManager'
+}
